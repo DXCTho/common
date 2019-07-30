@@ -10,9 +10,3 @@ public class DemoApplicationcom {
         SpringApplication.run(DemoApplicationcom.class, args);
     }
 }
-private void johnsUnusedCodeSmellMethod() {
-       String buggy=null;
-        buggy.trim();
-        
-        System.out.println("Foo!!!!!?");
-}
