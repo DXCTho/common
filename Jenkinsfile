@@ -15,7 +15,7 @@ pipeline {
     stage('Build') {
       steps {
         configFileProvider([configFile(fileId: '83e8ff71-6618-47d6-a6ca-78038527066f', variable: 'MAVEN_SETTINGS')]) {
-          sh 'mvn -s ${MAVEN_SETTINGS} clean install package'                                                                                           
+          sh 'mvn -s ${MAVEN_SETTINGS} clean install'                                                                                           
         }
       }
     }
@@ -28,7 +28,7 @@ pipeline {
            steps {
 		   withCredentials([string(credentialsId: 'JFrog_API_Key', variable: 'TOKEN')]) {
                 sh '''
-  			curl -H 'X-JFrog-Art-Api:'${TOKEN}'' -X PUT "http://172.17.0.3:8081/artifactory/libs-release-local/com/dai/xmp/${XMP_IMAGE}/${XMP_POM_VERSION}.pom" -T target/${XMP_IMAGE}-${XMP_POM_VERSION}.pom
+  			curl -H 'X-JFrog-Art-Api:'${TOKEN}'' -X PUT "http://172.17.0.3:8081/artifactory/libs-release-local/com/dai/xmp/${XMP_IMAGE}/${XMP_POM_VERSION}/${XMP_IMAGE}-${XMP_POM_VERSION}.pom" -T target/${XMP_IMAGE}-${XMP_POM_VERSION}.pom
 			curl -H 'X-JFrog-Art-Api:'${TOKEN}'' -X POST http://172.17.0.3:8081/artifactory/api/maven/calculateMetadata/libs-release-local/com/dai/xmp/${XMP_IMAGE}
                 '''
             }
