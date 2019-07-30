@@ -48,7 +48,7 @@
     
  <distributionManagement>
         <repository>
-            <id>Artifactory-Releases</id>
+            <id>central</id>
             <url>http://172.17.0.3:8081/artifactory/libs-release</url>
         </repository>
   </distributionManagement>
