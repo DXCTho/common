@@ -19,11 +19,6 @@ pipeline {
         }
       }
     }
-	stage('SonarQube analysis') {
-      steps {
-          sh "mvn sonar:sonar -Dsonar.host.url=${env.MYSONARHOST}"                                                                                         
-      }
-    }
 	stage('Artifactory') {
 		steps {
 	configFileProvider([configFile(fileId: '83e8ff71-6618-47d6-a6ca-78038527066f', variable: 'MAVEN_SETTINGS')]) {
