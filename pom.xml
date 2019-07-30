@@ -48,8 +48,8 @@
     
  <distributionManagement>
         <repository>
-            <id>central</id>
-            <url>http://172.17.0.3:8081/artifactory/libs-release</url>
+            <id>artifactory</id>
+            <url>http://172.17.0.3:8081/artifactory/libs-release-local</url>
         </repository>
   </distributionManagement>
       <dependencyManagement>
