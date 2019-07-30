@@ -45,6 +45,8 @@
 
     </properties>
  
+    
+ <distributionManagement>
     <repositories>
         <repository>
             <id>Artifactory-Releases</id>
@@ -67,7 +69,7 @@
             </releases>
         </repository>
     </repositories>
- 
+  </distributionManagement>
       <dependencyManagement>
         <dependencies>
             <!-- Spring Framework -->
