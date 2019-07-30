@@ -9,10 +9,10 @@ public class DemoApplicationcom {
     public static void main(String[] args) {
         SpringApplication.run(DemoApplicationcom.class, args);
     }
-}
-private void johnsUnusedCodeSmellMethod() {
+    private void johnsUnusedCodeSmellMethod() {
        String buggy=null;
         buggy.trim();
         
         System.out.println("Foo!!!!!?");
+    }
 }
