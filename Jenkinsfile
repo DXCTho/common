@@ -29,7 +29,6 @@ pipeline {
 		   withCredentials([string(credentialsId: 'JFrog_API_Key', variable: 'TOKEN')]) {
                 sh '''
   			curl -H 'X-JFrog-Art-Api:'${TOKEN}'' -X PUT "http://172.17.0.3:8081/artifactory/libs-release-local/com/dai/xmp/${XMP_IMAGE}/${XMP_POM_VERSION}/${XMP_IMAGE}-${XMP_POM_VERSION}.pom" -T /var/lib/jenkins/.m2/repository/com/dai/xmp/${XMP_IMAGE}/${XMP_POM_VERSION}/${XMP_IMAGE}-${XMP_POM_VERSION}.pom
-			curl -H 'X-JFrog-Art-Api:'${TOKEN}'' -X POST http://172.17.0.3:8081/artifactory/api/maven/calculateMetadata/libs-release-local/com/dai/xmp/${XMP_IMAGE}
                 '''
             }
 					
