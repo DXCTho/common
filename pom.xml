@@ -45,28 +45,19 @@
 
     </properties>
  
-    <repositories>
-        <repository>
-            <id>Artifactory-Releases</id>
-            <url>http://172.17.0.3:8081/artifactory/libs-release</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-        </repository>
-         <repository>
-            <id>Artifactory-Snapshots</id>
-            <url>http://172.17.0.3:8081/artifactory/libs-snapshot</url>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-            <releases>
-                <enabled>false</enabled>
-            </releases>
-        </repository>
-    </repositories>
+ <distributionManagement>
+    <repository>
+    <id>central</id>
+    <name>central-releases</name>
+    <url>http://172.17.0.3:8081/artifactory/libs-release-local</url>
+    </repository>
+    <snapshotRepository>
+    <id>central</id>
+    <name>snapshots</name>
+    <url>http://172.17.0.3:8081/artifactory/libs-snapshot-local</url>
+    </snapshotRepository>
+</distributionManagement>
+
  
       <dependencyManagement>
         <dependencies>
