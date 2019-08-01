@@ -46,13 +46,18 @@
     </properties>
  
     
- <distributionManagement>
-        <repository>
-            <id>central</id>
-            <url>http://172.17.0.3:8081/artifactory/libs-release-local</url>
-        </repository>
-  </distributionManagement>
-      <dependencyManagement>
+  <distributionManagement>
+    <repository>
+    <id>central</id>
+    <name>central-releases</name>
+    <url>http://172.17.0.3:8081/artifactory/libs-release-local</url>
+    </repository>
+    <snapshotRepository>
+    <id>central</id>
+    <name>snapshots</name>
+    <url>http://172.17.0.3:8081/artifactory/libs-snapshot-local</url>
+    </snapshotRepository>
+</distributionManagement>
         <dependencies>
             <!-- Spring Framework -->
             <dependency>
