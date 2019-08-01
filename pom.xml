@@ -58,6 +58,7 @@
     <url>http://172.17.0.3:8081/artifactory/libs-snapshot-local</url>
     </snapshotRepository>
 </distributionManagement>
+   <dependencyManagement>
         <dependencies>
             <!-- Spring Framework -->
             <dependency>
