@@ -34,7 +34,7 @@
         <commons-dbcp.version>1.4</commons-dbcp.version>
 
         <junit-jupiter.version>5.5.0-M1</junit-jupiter.version>
-        <assertj.version>3.11.1</assertj.version>
+        <assertj.version>3.27.7</assertj.version>
         <mockito.version>2.21.0</mockito.version>
         <mockito.extension.version>2.23.0</mockito.extension.version>
         <jackson.module.jsonSchema.version>2.3.0</jackson.module.jsonSchema.version>
